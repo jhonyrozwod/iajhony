@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+button {
+background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+/* Adicione estas classes para estilizar a conversa como uma timeline */
+.timeline {
+  border-left: 2px solid #007bff;
+  /* Cor da linha da timeline */
+  padding-left: 20px;
+  /* Espaçamento à esquerda da linha da timeline */
+  margin-bottom: 20px;
+  /* Espaçamento entre mensagens */
+}
+
+/* Estilo das mensagens do usuário (EU) */
+.user-message {
+  background-color: #007bff;
+  /* Cor de fundo das mensagens do usuário */
+  color: white;
+  /* Cor do texto das mensagens do usuário */
+  padding: 10px;
+  /* Espaçamento interno das mensagens */
+  border-radius: 5px;
+  /* Borda arredondada das mensagens */
+  margin: 10px 0;
+  /* Espaçamento entre mensagens */
+  width: 60%;
+  /* Largura das mensagens do usuário */
+  float: right;
+  /* Alinhar à direita */
+  clear: both;
+  /* Limpar a flutuação */
+}
+
+/* Estilo das mensagens da IA (resposta) */
+.ai-message {
+  background-color: #f0f0f0;
+  /* Cor de fundo das mensagens da IA */
+  color: #333;
+  /* Cor do texto das mensagens da IA */
+  padding: 10px;
+  /* Espaçamento interno das mensagens */
+  border-radius: 5px;
+  /* Borda arredondada das mensagens */
+  margin: 10px 0;
+  /* Espaçamento entre mensagens */
+  width: 60%;
+  /* Largura das mensagens da IA */
+  float: left;
+  /* Alinhar à esquerda */
+  clear: both;
+  /* Limpar a flutuação */
+}
+
+/* Estilo para o carimbo de data e hora */
+.timestamp {
+  font-size: 12px;
+  /* Tamanho da fonte para o timestamp */
+  color: #777;
+  /* Cor do timestamp */
+  display: block;
+  /* Faz o timestamp aparecer abaixo da mensagem */
+}
+
+/* Estilo para o campo de entrada de texto */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo para o botão "Ask AI" */
+.input-container input,
+.input-container button {
+  margin: 10px 0;
+}
+/* Estilo das mensagens como "posts" */
+.posts {
+  display: flex;
+  flex-direction: column-reverse;
+  /* Para exibir os posts mais recentes no topo */
+  align-items: center;
+}
+
+.post {
+  background-color: #fff;
+  /* Cor de fundo dos posts */
+  color: #333;
+  /* Cor do texto dos posts */
+  padding: 20px;
+  /* Espaçamento interno dos posts */
+  border: 1px solid #ddd;
+  /* Borda dos posts */
+  border-radius: 5px;
+  /* Borda arredondada dos posts */
+  margin: 10px 0;
+  /* Espaçamento entre os posts */
+  width: 60%;
+  /* Largura dos posts */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Sombra dos posts */
+  text-align: left;
+  /* Alinhamento do texto à esquerda */
+}
+
+/* Estilo das mensagens do usuário (EU) */
+.user-post {
+  background-color: #007bff;
+  /* Cor de fundo dos posts do usuário */
+  color: white;
+  /* Cor do texto dos posts do usuário */
+}
+
+/* Estilo das mensagens da IA (resposta) */
+.ai-post {
+  background-color: #f0f0f0;
+  /* Cor de fundo dos posts da IA */
+  color: #333;
+  /* Cor do texto dos posts da IA */
+}
+
+/* Estilo para o carimbo de data e hora */
+.timestamp {
+  font-size: 12px;
+  /* Tamanho da fonte para o timestamp */
+  color: #777;
+  /* Cor do timestamp */
+  display: block;
+  /* Faz o timestamp aparecer abaixo do post */
+}
+
+/* Estilo para o campo de entrada de texto */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  /* Espaçamento acima do campo de entrada de texto */
+}
+
+/* Estilo para o botão "Publicar" */
+.input-container input,
+.input-container button {
+  margin: 10px 0;
+}
